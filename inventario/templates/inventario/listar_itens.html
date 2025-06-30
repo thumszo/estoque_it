@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Estoque de TI</title>
+</head>
+<body>
+    <h1>Estoque</h1>
+    <a href="{% url 'cadastrar_item' %}">Novo Item</a>
+    <ul>
+        {% for item in itens %}
+            <li>
+                {{ item.nome }} - {{ item.quantidade }} unidades
+                [<a href="{% url 'editar_item' item.pk %}">Editar</a>]
+                [<a href="{% url 'remover_item' item.pk %}">Remover</a>]
+            </li>
+        {% empty %}
+            <li>Nenhum item cadastrado.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

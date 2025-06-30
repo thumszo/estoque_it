@@ -1,0 +1,14 @@
+{% extends 'inventario/base.html' %}
+
+{% block title %}Movimentar Estoque{% endblock %}
+
+{% block content %}
+<h2>Movimentar Estoque</h2>
+<form method="post" class="mb-3">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-success">Registrar</button>
+    <a href="{% url 'dashboard' %}" class="btn btn-secondary">Cancelar</a>
+</form>
+{% endblock %}
+

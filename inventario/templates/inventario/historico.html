@@ -1,0 +1,35 @@
+{% extends 'inventario/base.html' %}
+
+{% block title %}Histórico de Movimentações{% endblock %}
+
+{% block content %}
+<h2>Histórico</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Data</th>
+            <th>Tipo</th>
+            <th>Item</th>
+            <th>Quantidade</th>
+            <th>Usuário</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for mov in historico %}
+        <tr>
+            <td>{{ mov.data|date:"d/m/Y H:i" }}</td>
+            <td>{{ mov.get_tipo_display }}</td>
+            <td>{{ mov.item.nome }}</td>
+            <td>{{ mov.quantidade }}</td>
+            <td>{{ mov.usuario.username }}</td>
+        </tr>
+        {% empty %}
+        <tr>
+            <td colspan="4">Nenhum movimento registrado.</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<a class="btn btn-secondary" href="{% url 'dashboard' %}">Voltar</a>
+{% endblock %}
+

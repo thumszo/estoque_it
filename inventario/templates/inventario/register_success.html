@@ -1,0 +1,16 @@
+{% extends 'inventario/base.html' %}
+
+{% block title %}Cadastro Concluído{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="alert alert-success shadow rounded text-center">
+            <h4 class="alert-heading">Conta criada com sucesso!</h4>
+            <p>Você foi autenticado automaticamente no sistema.</p>
+            <hr>
+            <a href="{% url 'dashboard' %}" class="btn btn-primary">Ir para o painel principal</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

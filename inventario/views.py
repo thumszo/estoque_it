@@ -92,8 +92,8 @@ def register(request):
         form = UserCreationForm(request.POST)
         if form.is_valid():
             user = form.save()
-            login(request, user)  # loga automaticamente
-            return render(request, 'inventario/register_success.html')  # mostra a nova tela
+            login(request, user)  
+            return render(request, 'inventario/register_success.html')  
     else:
         form = UserCreationForm()
     return render(request, 'inventario/register.html', {'form': form})

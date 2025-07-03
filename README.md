@@ -1,4 +1,4 @@
-Projeto criado para a disciplina - Imersão Profissional - Criando uma aplicação - Universidade Uniasselvi
+Projeto criado para a disciplina - Imersão Profissional - Implementação de uma aplicação - Universidade Uniasselvi
 
 O projeto visa uma aplicação web desenvolvida em Django - Python.
 A aplicação trata-se de um sistema de estoque de insumos de TI.
